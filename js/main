@@ -1,0 +1,25 @@
+(function($) {
+  /**
+   * mobile menu
+   *toggleClass - если не активен, то добавить, иначе - убрать
+   */
+  $('.js-burger').click(function(){
+    $('.mobile-menu, .js-blackout').toggleClass('active');
+
+
+  });
+
+  $('.js-blackout, .js-close-menu').click(function(){
+    $('.mobile-menu, .js-blackout').removeClass('active');
+  });
+
+ 
+
+  /**
+   * logo effect
+   */
+  setInterval(function(){
+    $('.logo-effect').toggleClass('active');
+  }, 3200);
+
+})(jQuery);

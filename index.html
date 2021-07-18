@@ -1,1 +1,470 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Адаптивная верстка. Мебель 1.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+	
+	 <!-- JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./js/main.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+<!-- Подключение Jquery -->
+<script type="text/javascript">
+		$(document).ready(function() {   /* функция ready будет выполнено когда DOM будет готов - страница загружена полностью*/
+			$(".fancybox").fancybox({
+				'opacity'		: false,              /* Прозрачности нет */
+				'overlayShow'	: true,    /*затемнение общего фона страницы (по умолчанию true)/
+				'transitionIn'	: 'elastic', /transitionIn, transitionOut - анимация перехода состояния (по умолчанию 'fade'). Может принимать значения 'elastic' (окно появляется из точки), 'fade' (через прозрачность) или 'none' (нет).*/
+				'transitionOut'	: 'elastic'
+			});
+
+		}); 
+	</script>   
+ <!--Для плавной прокрутки до необходимого блока  подключим библиотеку-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script>skrollr.init();</script>      
+
+<!--Для создания кнопки наверх 
+     1. Ищем подходящую картинку или создаем сами
+	 2. Создаем див перед закрытием body (<div id="scrollup"></div>), используя id.
+	 3. Описываем созданный див в css, указывая ширину, высоту, абсолютный адрес нахождения картинки(кнопки), отступы
+	 4. Добавляем скрипт(ниже).
+-->
+<script type="text/javascript">
+$(function() {
+		$(window).scroll(function() {
+			if ($(this).scrollTop() != 0) {
+				$('#scrollup').fadeIn();
+			} else {
+				$('#scrollup').fadeOut();
+			}
+		});
+		$('#scrollup').click(function() {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+		});
+	});
+</script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+        <section class="header-contacts">
+            <div class="container">
+
+                <div class="header-contacts__items">
+                    <div class="header-contacts__item logo">
+
+                        <!-- 	<div class="mobile-btn mobile-menu-btn js-mobile-menu">
+            <div class="mobile-menu-burger js-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>Меню</span>
+            </div>
+          </div> -->
+
+                        <a class="logo-effect active" href="/">
+                            <img src="./img/logo.png" alt="Мебель в Симферополе"></a>
+
+                        <!--
+                        <div class="mobile-btn mobile-contacts-btn js-mobile-contacts">
+                            <div class="mobile-menu-contacts js-contacts"></div>
+                        </div>
+-->
+
+                    </div>
+                    <div class="header-contacts__item advantages">
+                        <p>Готовая и на заказ</p>
+                        <p>Изготовление до 10 дней</p>
+                        <p>Гарантия 3 года</p>
+                        <p>Доставка - бесплатно</p>
+                    </div>
+
+
+                    <div class="header-contacts__item address">
+
+                        <address>г. Симферополь,<br> ул. Русская 213 <br> ул. Кирова 45</address>
+
+                    </div>
+                    <div class="header-contacts__item email">
+
+                        <div class="mail-items">
+                            <a href="mailto:kasianenkonadezhda@gmail.com">kasianenkonadezhda@gmail.com</a>
+                            <a href="mailto:Mebelstilya@mail.ru">Mebelstilya@mail.ru</a>
+                        </div>
+
+                    </div>
+                    <div class="header-contacts__item phones">
+                        <div class="phones-items">
+                            <a href="tel:+79780000000">+7 (978) <span>000-00-00</span></a>
+                            <a href="tel:+79780000000">+7 (978) <span>000-00-00</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div
+			
+<!-- Мобильная полоска  Начало -->
+		<div class="mobile-header">
+		    <div  class="mobile-button">
+		      <div class="mobile-menu-burger js-burger">
+			      <span></span>
+				  <span></span>
+				  <span>Меню</span>
+			  </div>
+			</div>
+			  <a href="#" class="logo"><img src="./img/logo.png"></a>
+			  <div class="empty"></div>
+		</div>
+		<!-- Мобильная полоска  Конец -->
+		<div class="js-blackout"></div>
+		
+	<div class="mobile-menu">
+		<div class="mobile-menu-content">
+		   <div class="products-menu">
+		     <ul> 
+		      <li class="kitchen">
+                <a href="#">Кухни</a>		
+		   </li>
+		   <li class="kitchen2">
+                <a href="#">Кухни</a>		
+		   </li>
+		   <li class="kitchen">
+                <a href="#">Кухни</a>		
+		   </li>
+	      </ul>
+		</div>
+	</div>
+</div>
+		
+	
+        </section>
+    </header>
+
+    <main class="main">
+
+        <div class="fast-links">
+            <div class="container">
+                <ul>
+                    <li class="kitchen">
+                        <a href="#">Кухни</a>
+                    </li>
+                    <li class="cupboard">
+                        <a href="#">Шкафы</a>
+                    </li>
+                    <li class="sofa">
+                        <a href="#">Диваны</a>
+                    </li>
+                    <li class="reservation">
+                        <a href="#">Столы</a>
+                    </li>
+                    <li class="bed">
+                        <a href="#">Спальни</a>
+                    </li>
+                    <li class="gostinye">
+                        <a href="#">Гостинные</a>
+                    </li>
+                    <li class="countertop">
+                        <a href="#">Столешницы</a>
+                    </li>
+                    <li class="work-station">
+                        <a href="#">Кабинеты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div class="fototop-mobile">
+        <img src="./img/mobile-top.jpg">
+
+    </div>
+
+    <div class="popular">
+        <div class="container">
+            <h2 class="popular__header">Готовые решения</h2>
+            <div class="popular__items">
+                <a href="./img/6b.jpg" class="popular__item fancybox" rel="mebel">
+                    <div class="popular__item--img">
+                        <img src="./img/6.jpg">
+                    </div>
+                    <div class="popular__item--content">
+                        <div class="title">
+                            <h3>Диваны и кресла серии ANASAYFA</h3>
+                            <p class="category">Tüm Hakları Saklıdır</p>
+                        </div>
+                        <div class="price">500000 р</div>
+                    </div>
+                </a>
+                <a href="./img/5b.jpg" class="popular__item fancybox" rel="mebel">
+                    <div class="popular__item--img">
+                        <img src="./img/5.jpg">
+                    </div>
+                    <div class="popular__item--content">
+                        <div class="title">
+                            <h3>Диваны и кресла серии ANASAYFA</h3>
+                            <p class="category">Tüm Hakları Saklıdır</p>
+                        </div>
+                        <div class="price">500000 р</div>
+                    </div>
+                </a>
+                <a href="./img/4b.jpg" class="popular__item fancybox" rel="mebel">
+                    <div class="popular__item--img">
+                        <img src="./img/4.jpg">
+                    </div>
+                    <div class="popular__item--content">
+                        <div class="title">
+                            <h3>Диваны и кресла серии ANASAYFA</h3>
+                            <p class="category">Tüm Hakları Saklıdır</p>
+                        </div>
+                        <div class="price">500000 р</div>
+                    </div>
+                </a>
+                <a href="./img/3b.jpg" class="popular__item fancybox" rel="mebel">
+                    <div class="popular__item--img">
+                        <img src="./img/3.jpg">
+                    </div>
+                    <div class="popular__item--content">
+                        <div class="title">
+                            <h3>Диваны и кресла серии ANASAYFA</h3>
+                            <p class="category">Tüm Hakları Saklıdır</p>
+                        </div>
+                        <div class="price">500000 р</div>
+                    </div>
+                </a>
+                <a href="./img/2b.jpg" class="popular__item fancybox" rel="mebel">
+                    <div class="popular__item--img">
+                        <img src="./img/2.jpg">
+                    </div>
+                    <div class="popular__item--content">
+                        <div class="title">
+                            <h3>Диваны и кресла серии ANASAYFA</h3>
+                            <p class="category">Tüm Hakları Saklıdır</p>
+                        </div>
+                        <div class="price">500000 р</div>
+                    </div>
+                </a>
+                <a href="./img/1b.jpg" class="popular__item fancybox" rel="mebel">
+                    <div class="popular__item--img">
+                        <img src="./img/1.jpg">
+                    </div>
+                    <div class="popular__item--content">
+                        <div class="title">
+                            <h3>Диваны и кресла серии ANASAYFA</h3>
+                            <p class="category">Tüm Hakları Saklıdır</p>
+                        </div>
+                        <div class="price">500000 р</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="topmenu">
+        <div class="topmenu-item">
+            <div class="pict">
+                <img src="img/kitchen.svg">
+            </div>
+            <div class="text">
+                <a href="#">Кухни</a>
+            </div>
+        </div>
+        <div class="topmenu-item">
+            <div class="pict">
+                <img src="img/kitchen.svg">
+            </div>
+            <div class="text">
+                <a href="#">Кухни</a>
+            </div>
+        </div>
+        <div class="topmenu-item">
+            <div class="pict">
+                <img src="img/kitchen.svg">
+            </div>
+            <div class="text">
+                <a href="#">Кухни</a>
+            </div>
+        </div>
+        <div class="topmenu-item">
+            <div class="pict">
+                <img src="img/kitchen.svg">
+            </div>
+            <div class="text">
+                <a href="#">Кухни</a>
+            </div>
+        </div>
+        <div class="topmenu-item">
+            <div class="pict">
+                <img src="img/kitchen.svg">
+            </div>
+            <div class="text">
+                <a href="#">Кухни</a>
+            </div>
+        </div>
+        <div class="topmenu-item">
+            <div class="pict">
+                <img src="img/kitchen.svg">
+            </div>
+            <div class="text">
+                <a href="#">Кухни</a>
+            </div>
+        </div>
+        <div class="topmenu-item">
+            <div class="pict">
+                <img src="img/kitchen.svg">
+            </div>
+            <div class="text">
+                <a href="#">Кухни</a>
+            </div>
+        </div>
+        <div class="topmenu-item">
+            <div class="pict">
+                <img src="img/kitchen.svg">
+            </div>
+            <div class="text">
+                <a href="#">Кухни</a>
+            </div>
+        </div>
+    </div>
+
+   
+   
+   
+               <div class="why-block">
+                <div class="container">
+                    <h2>Почему выгодно заказывать у нас</h2>
+                    <div class="why-block__items">
+                        <div class="why-block__item">
+                            <div class="image"><img src="./img/discount.svg"></div>
+                            <h4>Низкие цены</h4>
+                            <p>Цена ниже рыночной и согласовывается в зависимости от объема выполненых работ</p>
+                        </div>
+                        <div class="why-block__item">
+                            <div class="image"><img src="./img/handshake.svg"></div>
+                            <h4>Индивидуальный подход</h4>
+                            <p>Учтены будут любые ваши пожелания</p>
+                        </div>
+                        <div class="why-block__item">
+                            <div class="image"><img src="./img/pantone.svg" alt=""></div>
+                            <h4>Большой выбор вариантов</h4>
+                            <p>Работа по шаблону и с вашими мультимедиа</p>
+                        </div>
+                        <div class="why-block__item">
+                            <div class="image"><img src="./img/armchair1.svg" alt=""></div>
+                            <h4>Комфортные условия покупки</h4>
+                            <p>Оплата удобным для вас способом</p>
+                        </div>
+                        <div class="why-block__item">
+                            <div class="image"><img src="./img/shield.svg" alt=""></div>
+                            <h4>Гарантия качества</h4>
+                            <p>Исправление недочетов в случае их обнаружения</p>
+                        </div>
+                        <div class="why-block__item">
+                            <div class="image"><img src="./img/gear.svg" alt=""></div>
+                            <h4>Высокое качество продукции</h4>
+                            <p>Адаптивная верстка под любое расширение экрана</p>
+                        </div>
+                        <div class="why-block__item">
+                            <div class="image"><img src="./img/contract.svg" alt=""></div>
+                            <h4>Прозрачный договор</h4>
+                            <p>Все условия оговариваются</p>
+                        </div>
+                        <div class="why-block__item">
+                            <div class="image"><img src="./img/tool.svg" alt=""></div>
+                            <h4>Грамотный монтаж</h4>
+                            <p>Дополнительная возможность заливки на хостинг и подключение доменного имени</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+     
+     
+     <div class="stage-work">
+  <div class="container">
+    <h2>Этапы работы с нами</h2>
+    <div class="stage-work__items">
+      <div class="stage-work__item">
+        <div class="stage-work__item--header">
+          <div class="num">1</div>
+          <div class="title">Заявка</div>
+        </div>
+        <div class="stage-work__item--content">
+          <p>Оставьте заявку на сайте или по телефону <a href="tel:+79780000000">+7 (978) 000-00-00</a> и мы Вам перезвоним!</p>
+        </div>
+      </div>
+      <div class="stage-work__item">
+        <div class="stage-work__item--header">
+          <div class="num">2</div>
+          <div class="title">Встреча</div>
+        </div>
+        <div class="stage-work__item--content">
+          <p>Обсуждение условий, составление технического задания и подписание договора.</p>
+        </div>
+      </div>
+      <div class="stage-work__item">
+        <div class="stage-work__item--header">
+          <div class="num">3</div>
+          <div class="title">Эскиз</div>
+        </div>
+        <div class="stage-work__item--content">
+          <p>Обсуждение условий, составление технического задания и подписание договора.</p>
+        </div>
+      </div>
+      <div class="stage-work__item">
+        <div class="stage-work__item--header">
+          <div class="num">4</div>
+          <div class="title">Визуализация</div>
+        </div>
+        <div class="stage-work__item--content">
+          <p>Максимально приближенное к реальности изображение всех основных помещений вашего интерьера.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+     
+     <div id="scrollsocial">
+	 <div class="scrollsocial-vk">
+	    <a href="https://vk.com/alexdarb" target="_blank"><img src="img/vk.png"></a>
+	</div>
+	<div class="scrollsocial-fb">
+	    <a href="#" target="_blank"><img src="img/fb.png"></a>
+	</div>
+	<div class="scrollsocial-tw">
+	    <a href="#" target="_blank"><img src="img/tw.png"></a>
+	</div>
+	<div class="scrollsocial-g">
+	    <a href="#" target="_blank"><img src="img/g.png"></a>
+	</div>
+</div>
+<a href="#top">
+ <div id="scrollup"></div>
+     
+ </a>    
+     
+ 
+
+
+
+</body>
+
+</html>
